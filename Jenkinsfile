@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-       imagename = "austinobioma/tomcat"
+       imagename = "clement/tomcat"
        registryCredential = 'DockerHub'
        dockerImage = ''
            }
@@ -40,7 +40,7 @@ pipeline {
     stage ('Deploy To Tomcat Server') {
       steps{
         script {
-         deploy adapters: [tomcat9(credentialsId: 'Deployer', path: '', url: 'http://18.209.228.246:8080')], contextPath: '/hello-world', onFailure: false, war: '**/hello-world.war'
+         deploy adapters: [tomcat9(credentialsId: 'Tomcat_deploymentI_D', path: '', url: 'http://35.180.34.193:8080/')], contextPath: 'view', onFailure: false, war: '**/*.war'
       }
      }
    }
