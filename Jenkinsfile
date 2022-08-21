@@ -1,8 +1,8 @@
 pipeline {
   agent any
   environment {
-       imagename = "clem/tomcat"
-       registryCredential = 'Dockerhub'
+       imagename = "clems/tomcat"
+       registryCredential = 'DockerhubID'
        dockerImage = ''
            }
   tools {
