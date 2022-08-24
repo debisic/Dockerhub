@@ -40,7 +40,7 @@ pipeline {
     stage ('Deploy To Tomcat Server') {
       steps{
         script {
-         deploy adapters: [tomcat9(credentialsId: 'TOMCAT', path: '', url: 'http://52.91.73.97:8080/')], contextPath: 'win', onFailure: false, war: '**/*.war'
+         deploy adapters: [tomcat9(credentialsId: 'TomcatID', path: '', url: 'http://34.239.121.42:8080/')], contextPath: 'Web', war: '**/*.war'
       }
      }
    }
