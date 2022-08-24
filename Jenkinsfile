@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-       imagename = "debisic/tomcat"
+       imagename = "debisic/tomcat8"
        registryCredential = 'DockerhubID'
        dockerImage = ''
            }
